@@ -23,6 +23,9 @@ contract BNFT is BRC721Enumerable, Pausable {
         return baseURI;
     }
 
+    function mint(address to, uint tokenId) external {
+        _mint(to, tokenId);
+    }
 
     /**
      * override tokenURI(uint256), remove restrict for tokenId exist.
